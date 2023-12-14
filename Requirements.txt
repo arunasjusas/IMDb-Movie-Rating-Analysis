@@ -1,0 +1,13 @@
+# Web Scraping
+bs4
+requests
+
+# Database Interaction
+psycopg2
+
+# Data Analysis and Manipulation
+pandas
+
+# Data Visualization
+matplotlib
+seaborn
