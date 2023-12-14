@@ -42,7 +42,6 @@ for page_num in range(1,77):
 
     # Check the response of the URL to see if we will be able to scrape data using it
     response = requests.get(url, headers=headers)
-    # print(response)
 
     # Using BeautifulSoup we extract the elements of HTML that have the data that we need
     soup = BeautifulSoup(response.content, 'html.parser')
