@@ -7,6 +7,7 @@ This project is designed to scrape movie data from IMDb using `ScrapingIMDb.py`,
 which offers an interactive experience for generating various graphs based on user selection.
 
 ## Requirements
+- PyCharm
 - Python 3.x
 - Libraries: `bs4`, `pandas`, `requests`, `psycopg2`, `matplotlib`, `seaborn`
 - PostgreSQL database
