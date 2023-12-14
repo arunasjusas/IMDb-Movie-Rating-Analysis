@@ -21,7 +21,7 @@ df = pd.DataFrame(records, columns=['Id','Title', 'Release year', 'Genre', 'Runt
 
 while True:
 
-# 1: Top 5 Most Popular Genres
+    # 1: Top 5 Most Popular Genres
     def show_1():
         plt.style.use('dark_background')  # Set the plot style for a visually appealing dark background
         top_genre = df['Genre'].value_counts().head(5)  # Count the occurrences of each genre and select the top 5
@@ -116,11 +116,9 @@ while True:
         plt.style.use('dark_background')  # Set the plot style for a visually appealing dark background
         correlation = df[['Rating', 'Runtime(min)', 'Votes', 'Release year']].corr()  # Create a correlation matrix
         plt.figure(figsize=(8,6))  # Set the figure size
-
         # Generate a heatmap using Seaborn to visually represent the correlation matrix
         # Include numerical annotations, use the 'winter' color map, and set linewidth between cells to 0.5
         sns.heatmap(correlation, annot=True, cmap='winter', linewidths=0.5)
-
         plt.title('Correlation Heatmap Between Movie Rating, Runtime, Release Year And Votes')  # Set the title of the plot
         plt.show()  # Display the plot
 
@@ -150,7 +148,7 @@ while True:
         plt.title("Top Rated Genres By The Average Rating")  # Set the title of the plot
         plt.show()  # Display the plot
 
-
+    # Creating a system that allows the user to choose which of the graphs should be displayed
     print("Select the graph that you want to be displayed:")
     print("1: Top 5 Most popular genres")
     print("2: Top 5 Most Popular Genres By Votes")
@@ -164,6 +162,7 @@ while True:
     print("Enter the number of your choice: \n")
     choice = input()
 
+    # According to the users choice, we select the appropriate action
     if choice == '1':
         show_1()
     elif choice == '2':
